@@ -34,10 +34,10 @@
         @Html.DisplayFor(modelItem => eachGummy.origin)
       </td>
       <td>
-        @Html.ActionLink("Details","Details", new {id = eachGummy.id}) |
-        @Html.ActionLink("Edit","Edit", new {id = eachGummy.id}) |
-        @Html.ActionLink("Delete","Delete", new {id = eachGummy.id}) |
-      </td>
+        <button class="btn btn-info">@Html.ActionLink("Details", "Details", new { id = eachGummy.id })</button>
+        <button class="btn btn-warning">@Html.ActionLink("Edit", "Edit", new { id = eachGummy.id })</button>
+        <button class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id = eachGummy.id })</button>
+</td>
     </tr>
   }
 </table>

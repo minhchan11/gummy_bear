@@ -5,7 +5,12 @@
 
 @model GummyBearKingdom.Models.Gummy
 
-<h2>Detail</h2>
-<h6>Name: @Html.DisplayFor(model => model.name)</h6>
-<h6>Cost: $ @Html.DisplayFor(model => model.cost)</h6>
-<h6>Country of Origin: @Html.DisplayFor(model => model.origin)</h6>
+<div class="panel panel-warning">
+    <div class="panel-heading">Detail</div>
+    <div class="panel-body">
+        <h6>Name: @Html.DisplayFor(model => model.name)</h6>
+        <h6>Cost: $ @Html.DisplayFor(model => model.cost)</h6>
+        <h6>Country of Origin: @Html.DisplayFor(model => model.origin)</h6>
+    </div>
+</div>
+
