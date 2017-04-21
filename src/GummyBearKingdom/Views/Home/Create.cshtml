@@ -1,0 +1,21 @@
+﻿@{
+  ViewData["Title"] = "Add a new Gummy Bear";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model GummyBearKingdom.Models.Gummy
+
+<h6>New Gummy Bear Form</h6>
+@using (Html.BeginForm())
+{
+  <label>New Name:</label>
+@Html.TextBoxFor(model => model.name)
+    <br />
+  <label>New Cost:</label>
+  @Html.TextBoxFor(model => model.cost)
+    <br />
+  <label>New Country of Origin:</label>
+  @Html.TextBoxFor(model => model.origin)
+    <br />
+  <input type="submit" class="btn btn-primary" value="Add new Gummy!">
+}

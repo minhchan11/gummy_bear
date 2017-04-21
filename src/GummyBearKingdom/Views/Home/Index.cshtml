@@ -1,0 +1,47 @@
+﻿@{
+  ViewData["Title"] = "All Gummies";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<GummyBearKingdom.Models.Gummy>
+
+<h5>All the Gummies in The Kingdom!</h5>
+<table class="table table-striped">
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Cost
+    </th>
+    <th>
+      Country of origin
+    </th>
+    <th>
+      Actions
+    </th>
+  </tr>
+  @foreach (var eachGummy in Model)
+  {
+    <tr>
+      <td>
+        @Html.DisplayFor(modelItem => eachGummy.name)
+      </td>
+      <td>
+        $ @Html.DisplayFor(modelItem => eachGummy.cost)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => eachGummy.origin)
+      </td>
+      <td>
+        @Html.ActionLink("Details","Details", new {id = eachGummy.id}) |
+        @Html.ActionLink("Edit","Edit", new {id = eachGummy.id}) |
+        @Html.ActionLink("Delete","Delete", new {id = eachGummy.id}) |
+      </td>
+    </tr>
+  }
+</table>
+
+<p>
+  @Html.ActionLink("Add a new gummy bear to the list", "Create")
+</p>

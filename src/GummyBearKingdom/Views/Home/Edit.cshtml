@@ -1,0 +1,18 @@
+@{
+  ViewData["Title"] = "Edit "+ @Model.name;
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model GummyBearKingdom.Models.Gummy
+
+@using(Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.id)
+  <label>Name:</label>
+  <h6> @Html.EditorFor(model => model.name)</h6>
+  <label>Cost:</label>
+  <h6> @Html.EditorFor(model => model.cost)</h6>
+  <label>Origin:</label>
+  <h6> @Html.EditorFor(model => model.origin)</h6>
+  <input type="submit" class="btn btn-success" value="save">
+}

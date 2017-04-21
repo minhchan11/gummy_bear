@@ -1,0 +1,17 @@
+@{
+  ViewData["Title"] = "Delete "+ @Model.name;
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model GummyBearKingdom.Models.Gummy
+
+<h5>Confirm deletion for @Model.name</h5>
+<div class="well">
+  <h6>Name: @Html.DisplayFor(model => model.name)</h6>
+  <h6>Cost: $ @Html.DisplayFor(model => model.cost)</h6>
+  <h6>Country of Origin: @Html.DisplayFor(model => model.origin)</h6>
+</div>
+@using (Html.BeginForm())
+{
+  <input type="submit" class="btn btn-danger" value="Delete">
+}
